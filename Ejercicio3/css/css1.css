@@ -1,0 +1,64 @@
+body{
+    background-color: rgb(155, 76, 230);
+}
+#titulo{
+    
+    width: 100%;
+    height: auto;
+    background-color: pink;
+    float:top;
+    text-align: center;
+    font-size: 50px;
+    margin:2px;
+    
+   
+}
+
+#cuadro1{
+    width: 25%;
+    float: left;
+    background-color: rgb(109, 14, 101);
+
+    margin:2px;
+
+}
+
+#cuadro2{
+    width: 49%;
+    
+    position:relative;
+    float:left;
+    background-color: rgb(109, 14, 101);
+    
+    margin:2px;
+
+}
+#cuadro3{
+    width: 25%;
+    
+    float: left;
+    background-color: rgb(109, 14, 101);
+    
+    margin:2px;
+
+}
+#cuadro4{
+    width: 20%;
+    
+    float: left;
+    background-color: rgb(109, 14, 101);
+    
+    margin:2px;
+
+}
+
+#cuadro5{
+    
+    ;
+    
+
+}
+
+
+
+

@@ -1,0 +1,21 @@
+.encabezados{
+ text-align: center;
+ color: blue;
+ font-size: 200%;
+}
+
+.parrafo{
+    margin-left: 20px;
+    text-align: left;
+    color: yellow;
+}
+
+.cuadrado{
+  width: 150px;
+  color: gray;
+}
+
+body{
+  background-image: url(descarga.jpg);
+}
+
