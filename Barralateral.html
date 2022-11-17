@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista lateral</title>
+    <style>
+    
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color:#F6DDCC;
+            
+            }
+            #general {margin-left: 4px;}
+
+            #cajagrande {overflow: auto;}
+            
+            
+            
+            #cajabarra {
+              float: none;
+              width: auto;
+            }
+            
+            #lista {
+              margin: 0;
+              padding: 0;
+            }
+            
+            .lista {
+              background: #95A5A6;
+              border: 1px solid #d4d4d4;
+              border-radius: 4px;
+              list-style-type: none;
+              margin: 4px;
+              padding: 2px;
+              text-align:center;
+              height: 50px;
+              line-height:50px;
+              vertical-align:center;
+            }
+            
+            @media screen and (min-width: 480px) {
+              #cajabarra {width: 200px; float: right;}
+              #general {margin-right: 220px;}
+            }
+            @media print {
+                body {
+                    background-color: #fff;
+                    font-family: 'Times New Roman', Times, serif;
+                }
+                #cajabarra {
+                    display:none;
+                }
+            }
+            
+    </style>
+</head>
+
+
+
+
+<body>
+        
+    <div id="cajagrande">
+      <div id="cajabarra">
+        <ul id="lista">
+          <li class="lista">W3Schools</li>
+          <li class="lista">Aprende HTML</li>
+          <li class="lista">Aprende CSS</li>
+          <li class="lista">Referencia Mozilla</li>
+          <li class="lista">Trucos CSS</li>
+        </ul>
+      </div>
+      
+      <div id="general">
+        <h1>Aprende HTML y CSS</h1>
+        <p>Redimensiona la pantalla para visualizarla en diferentes tamaños. Observa como cambia el menú para adaptarse a los diferentes tamaños de pantalla.</p>
+        <p>Pulsa imprimir la página para ver la previsualización, observa cómo cambia la tipografía y desaparece el menú.</p>
+      </div>
+    </div>
+    
+    </body>
+</html>
