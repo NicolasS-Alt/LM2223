@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista lateral</title>
+    <style>
+    
+        body {
+          background-color:#dfb397;
+            font-family: Courier New, Monaco, Consolas;
+            
+            
+            }
+            .general {margin-left: 4px;}
+
+            .cajagrande {overflow: auto;}
+            
+            .apartados {
+              text-align:center;
+              background: #69797a;
+              border-radius: 3px;
+              list-style-type: none;
+              margin: 3px;
+              height: 45px;
+              line-height:45px;
+              vertical-align:center;
+              border: 1px solid #ffffff;
+              padding: 1px;
+            }
+            
+            .cajabarra {
+              width: auto;
+              float: none;
+              
+            }
+            
+            .lista {
+              padding: 0;
+              margin: 0;
+              
+            }
+            
+            
+            
+            @media screen and (min-width: 480px) {
+              .cajabarra {width: 195px; float: right;}
+              .general {margin-right: 200px;}
+            }
+            @media print {
+                body {
+                    background-color: #fff;
+                    font-family: 'Times New Roman', Times, serif;
+                }
+                .cajabarra {
+                    display:none;
+                }
+            }
+            
+    </style>
+</head>
+
+
+<body>
+        
+    <div class="cajagrande">
+      <div class="cajabarra">
+        <ul class="lista">
+          <li class="apartados">W3Schools</li>
+          <li class="apartados">Aprende HTML</li>
+          <li class="apartados">Aprende CSS</li>
+          <li class="apartados">Referencia Mozilla</li>
+          <li class="apartados">Trucos CSS</li>
+        </ul>
+      </div>
+      
+      <div class="general">
+        <h1>Aprende HTML y CSS</h1>
+        <p>Si cambias el tamaño de la pantalla puedes ver como cambia la disposicion de los elementos.</p>
+        <p>Si pulsas en imprimir la pagina tambien cambia.</p>
+      </div>
+    </div>
+    
+    </body>
+</html>
