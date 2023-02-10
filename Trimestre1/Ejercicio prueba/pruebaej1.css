@@ -9,7 +9,7 @@
       background-color: #970043;
       height: 100vh;
     }
-    
+    /*Ajusta la cabecera*/
     .header {
       background-color: #ffd100;
       padding: 20px;
@@ -26,13 +26,13 @@
     }
     
     /* Create three unequal columns that sits next to each other */
-    .column {
+    .columna {
       padding: 10px;
       background-color:#970043;
     }
   
     /* Columnas laterales */
-    .column.side {
+    .columna.lateral {
        -webkit-flex: 1;
        -ms-flex: 1;
        flex: 1;
@@ -42,6 +42,7 @@
        margin-top: auto;
        margin-bottom: auto;
     }
+    /*Ajusta las imagenes*/
     img {
         max-width:100%;
     }
@@ -51,7 +52,7 @@
         margin-bottom: 10px;
     }
     /* Columna central */
-    .column.middle {
+    .columna.centro {
       -webkit-flex: 2;
       -ms-flex: 2;
       flex: 2;
@@ -59,7 +60,8 @@
       background-color: #f2f2f2;
       height:100vh;
     }
-    .column.middle:hover {
+    /*Capa de la columna central*/
+    .columna.centro:hover {
         -webkit-flex: 2;
         -ms-flex: 2;
         flex: 2;
@@ -71,6 +73,7 @@
     p {
         margin: 0 auto;
     }
+
     p::first-letter {
         font-size: 1.5rem;
         font-weight: bold;
@@ -79,9 +82,11 @@
     a {
         text-decoration: none;
         font-weight: bold;
+        /*Cambia el cursor de forma*/
         cursor:help;
         color:#ffd100
     }
+    /*ajusta el pie de pagina*/
     .footer {
       background-color: #ffd100;
       padding: 10px;
