@@ -1,0 +1,17 @@
+.form {
+    background: #fff;
+  }
+
+  /* Estilo del formulario */
+  form {
+    display: grid;
+    /* Deseamos que las cajas de texto ocupen lo mismo */
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+  form label {
+    display: block;
+  }
+  form p {
+    margin: 0;
+  }
