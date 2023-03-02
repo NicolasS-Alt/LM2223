@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SessionStorage</title>
+</head>
+<body>
+    <p>Usuario</p>
+    <input id="usuario" type="text">
+    <p>Contraseña</p>
+    <input id="contraseña" type="text">
+    <p>
+    <button onclick="guardar()">Guardar</button>
+    </p>
+    <p id="usuarioGuardado"></p>
+    <p id="contraseñaGuardada"></p>
+    <p><button onclick="guardado()">Mostrar datos guardados</button></p>
+    
+
+
+<script>
+    function guardar(){
+        sessionStorage.setItem('user', document.getElementById('usuario').value);
+        sessionStorage.setItem('password', document.getElementById('contraseña').value);
+    }
+    function guardado(){
+        document.getElementById('usuarioGuardado').innerHTML=sessionStorage.getItem('user')
+        document.getElementById('contraseñaGuardada').innerHTML=sessionStorage.getItem('password')
+    }
+
+</script>
+
+</body>
+</html>
