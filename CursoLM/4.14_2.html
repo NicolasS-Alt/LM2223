@@ -24,6 +24,7 @@
         <h2>Haz click en los circulos y rectángulos tan rápido como puedas!</h2>
         <p class="bold">Tiempo de reacción: <span id="tiempoReaccion"></span></p>
         <p>Tu record es: <span id="tiempoRecord"></span></p>
+        <button onclick="guardar()">GuardarRecord</button>
         <div id="forma"></div>
         <script type>
             
@@ -65,14 +66,7 @@
                 document.getElementById("forma").style.display = "block";
                 inicio = new Date().getTime();
 
-                localStorage.setItem('guardaTiempo', document.getElementById('tiempoReacción').value);
-
-                if(diferencia>guardaTiempo){
-
-                    guardaTiempo=tiempoReaccion;
-                 
-                }
-                document.getElementById('tiempoRecord').innerHTML=sessionStorage.getItem('guardaTiempo')
+                
             }
             function aparecerFormaDespuesRetraso()
             {
@@ -87,6 +81,20 @@
                 var diferencia = (fin-inicio)/1000;
                 document.getElementById("tiempoReaccion").innerHTML = diferencia + "s";
                 aparecerFormaDespuesRetraso();
+
+                
+            }
+
+            function guardar()
+            {
+                localStorage.setItem('guardaTiempo', document.getElementById('tiempoReacción').value);
+
+                if(diferencia>guardaTiempo){
+
+                 guardaTiempo=tiempoReaccion;
+ 
+                }
+                 document.getElementById('tiempoRecord').innerHTML=localStorage.getItem('guardaTiempo')
             }
             
         </script>
