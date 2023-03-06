@@ -23,8 +23,11 @@
         <h1>Comprueba tus reflejos!</h1>
         <h2>Haz click en los circulos y rectángulos tan rápido como puedas!</h2>
         <p class="bold">Tiempo de reacción: <span id="tiempoReaccion"></span></p>
+        <p>Tu record es: <span id="tiempoRecord"></span></p>
         <div id="forma"></div>
-        <script type="text/javascript">
+        <script type>
+            
+
             var inicio = new Date().getTime(); // Alcance global
             
             function obtenerColorAleatorio() {
@@ -61,6 +64,15 @@
 
                 document.getElementById("forma").style.display = "block";
                 inicio = new Date().getTime();
+
+                localStorage.setItem('guardaTiempo', document.getElementById('tiempoReacción').value);
+
+                if(diferencia>guardaTiempo){
+
+                    guardaTiempo=tiempoReaccion;
+                 
+                }
+                document.getElementById('tiempoRecord').innerHTML=sessionStorage.getItem('guardaTiempo')
             }
             function aparecerFormaDespuesRetraso()
             {
@@ -76,6 +88,7 @@
                 document.getElementById("tiempoReaccion").innerHTML = diferencia + "s";
                 aparecerFormaDespuesRetraso();
             }
+            
         </script>
     </body>
 </html>
