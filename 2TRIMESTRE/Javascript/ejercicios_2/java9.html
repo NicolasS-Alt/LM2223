@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript 9</title>
+</head>
+<body>
+    
+    <h1>Escribe tu nombre:</h1>
+    
+    <input id="nombre" type="textbox">
+    
+    <button onclick="saludo()">Saludar</button>
+    
+    <script>
+        function saludo() {
+        var cadena;
+        cadena = document.getElementById("nombre").value;
+        alert('Bienvenido '+cadena);
+    }
+    </script>
+
+</body>
+</html>

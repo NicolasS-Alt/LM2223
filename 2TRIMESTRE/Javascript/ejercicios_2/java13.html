@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript 13</title>
+</head>
+<body>
+
+    <p>Pulsa el botón para sustraer elemento.</p>
+    
+    <button onclick="quitar()">Eliminar</button>
+    
+    <p id="parrafo"></p>
+    
+    <script>
+        var frutas = ["Platano", " Naranja", " Manzana", " Mango"];
+        document.getElementById("parrafo").innerHTML = frutas;
+        
+        function quitar() {
+        frutas.pop();
+        document.getElementById("parrafo").innerHTML = frutas;
+        }
+    </script>
+    
+</body>
+</html>

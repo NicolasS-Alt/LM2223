@@ -1,0 +1,152 @@
+/* 
+<link rel="stylesheet" href="reset.css">
+*/
+        div{
+
+            background-color: blueviolet;
+            width: auto;
+            height: auto;
+            border: 10 px dashed red;
+            padding: auto;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+
+            position: relative; desde donde deberia estar en el flujo (debajo de lo demas)
+            top: auto;
+            left: auto;
+
+            position: absolute; desde arriba a la izquierda, no esta en el flujo (donde quieras)
+            top: auto;
+            left: auto;
+
+            position: fixed; se queda fijo, se queda encima del texto (parrafos...)
+
+            z-index: 2/-2; ponerlo por encima o debajo de lo demás
+
+            overflow: scroll/auto(sin barras si no es necesario)/hidden(corta texto); se ajusta al div el texto para que no se salga
+            
+            overflow-x:hidden;
+            overflow-y:auto;
+
+            float: right/left;
+
+            clear ...
+            left; El elemento se empuja debajo de los elementos flotantes izquierdos
+            right; El elemento se empuja debajo de los elementos flotantes a la derecha
+            both; El elemento se empuja debajo de los elementos flotantes izquierdo y derecho
+            inherit; El elemento hereda el valor claro de su padre
+
+            display: inline;
+            display: inline-block;
+            display: block;
+
+            justify-content: center;
+            display: flex; centrar div 
+
+            text-align:center;
+            vertical-align:middle;
+            line-height:100px; igual de los px de altura del div
+            //
+            align-items: center; centrar letras en el medio del cuadro / TIENE QUE TENER DISPLAAY:FLEX
+
+            box-sizing: border-box; el div queda a tamaño real de px aunque aumentes el padding o border
+
+            ---
+            @media screen and (max-width: 992px) {
+            body {
+            background-color: blue;
+            color: white;}
+            .class {
+                cod
+            }
+            } 
+            
+            ---
+            .contenedor {
+            display: flex;
+            flex-wrap: nowrap/wrap/wrap-reverse; no salta de linea/se queda el tamaño original y se van moviendo hacia abajo/ igual al revés el orden
+            flex-direction: column/row//-reverse;
+            background-color: DodgerBlue;
+            justify-content: center/flex-start/flex-end/space-around/space-between/space-evenly;
+            align-items: center/strech/baseline;
+            }
+
+            .contenedor > div {
+            background-color: #f1f1f1;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            font-size: 30px;
+            }
+
+            .div1{
+            align-self: stretch/center/start/end;
+            }
+
+            </style>
+            </head>
+            <body>
+
+            <div class="contenedor">
+            <div class="div1">1</div>
+            <div>2</div>
+            <div>3</div>  
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>  
+            <div>7</div>
+            <div>8</div>
+            </div>
+            
+            ---
+
+            html, body {
+                height:100vh; 
+                overflow: hidden; esconder de la pagina los scroll
+                margin: 0;
+                padding: 0; quitar margenes y espacios
+            }
+
+            div {
+                height: 100%;
+            }
+
+            hace que el div se ajuste a la altura completa de la ventana
+
+            ---
+
+            font-size: xx-small//large; tamaño letra formato preferible
+
+            ---
+
+            * {
+            box-sizing: border-box;
+            } se aplica a todas las etiquetas
+
+            ---
+
+            padding: 0 100px; primer numero padding arriba abajo y segundo para los lados
+
+            ---
+
+            height: 80vh; /*80% del viewport*/
+            
+            ---
+
+            gap: 10px; para columna y filas
+            column-gap: ; espacio entre caja columna
+            row-gap: ; espacio entre caja fila 
+
+            display: grid;
+            grid-template-columns: 20% 20% 30% 30%; ancho de las cajas por columna
+            grid-template-rows: 40% 40% 20% 20%; largo de las cajas por fila
+            grid-column: 1/span 4; /*linea desde donde se expande la caja y espacios que se agranda (hacia derecha)*/
+            grid-row: 1/span 2; /*linea desde donde se expande la caja y espacios que se agranda (hacia abajo)*/
+
+        grid-template-areas: "cabecera cabecera" "menu menu" "contenido banners" "pie pie"; /*ORDEN POR FILAS DEL DIV*/
+        grid-area: cabecera; /*IDENTIFICADORES*/
+
+        
+    
