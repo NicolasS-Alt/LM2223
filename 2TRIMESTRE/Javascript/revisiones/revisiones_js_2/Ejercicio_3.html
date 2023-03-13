@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="ej3.js"></script>
+    <link rel="stylesheet" href="ej3.css">
+    <title>CREACIÓN DE USUARIO</title>
+</head>
+<body>
+<h3>RELLENE EL SIGUIENTE FORMULARIO:</h3>
+<form action="" method="get">
+    Nombre<input id="nombre" type="text" placeholder="Introduzca su Nombre" required="required"><br>
+    
+    Apellido<input id="apellido" type="text" placeholder="Introduzca su Apellido" required="required"><br>
+
+    Correo electrónico<input id="correo" type="email" placeholder="Introduzca su Correo" required="required"><br>
+
+    Dirección<input id="direccion" type="text" placeholder="Introduzca su Dirección"><br>
+
+    Ciudad<input id="ciudad" type="text" placeholder="Introduzca su Ciudad"><br>
+
+    Teléfono (+34)<input id="tlf" type="number" placeholder="Introduzca su Teléfono" minlength="9" maxlength="9" required="required"><br>
+
+    DNI<input id="dni" type="text" placeholder="Introduzca su DNI" minlength="9" maxlength="9" required="required"><br>
+
+    PIN (8 dígitos)<input id="pin" type="number" placeholder="Introduzca su PIN" minlength="8" maxlength="8" required="required"><br>
+
+    Repite el PIN<input id="pin2" type="number" placeholder="Repita el PIN" minlength="8" maxlength="8" required="required"><br>
+
+    <button onclick="enviar()">ENVIAR</button>
+</form> 
+</body>
+</html>
