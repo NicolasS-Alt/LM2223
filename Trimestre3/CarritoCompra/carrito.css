@@ -66,6 +66,32 @@
   body{
     background-color:lightsalmon ;
    }
+   .agregar{
+    background:    #ff0000;
+    background:    linear-gradient(#000000, #ff0000 50%, #000000);
+    border:        3px solid #556699;
+    border-radius: 21px;
+    box-shadow:    0 1px #ff1515;
+    padding:       5px 12px;
+    color:         #ffffff;
+    display:       inline-block;
+    font:          normal bold 25px/1 "Lobster Two", cursive;
+    text-align:    center;
+   }
+   .quitar{
+    background:    #ff0000;
+    background:    linear-gradient(#000000, #ff0000 50%, #000000);
+    border:        3px solid #556699;
+    border-radius: 21px;
+    box-shadow:    0 1px #ff1515;
+    padding:       5px 12px;
+    color:         #ffffff;
+    display:       inline-block;
+    font:          normal bold 25px/1 "Lobster Two", cursive;
+    text-align:    center;
+    align-items: center;
+   }
+
    .productos {
        display: flex;
        flex-wrap: wrap; 
@@ -110,9 +136,7 @@
        margin-bottom: 10px;
      }
      
-     #vaciar-carrito {
-       margin-right: 10px;
-     }
+    
    
      img{
        width: auto;
@@ -138,3 +162,18 @@
      justify-content: space-around;
      border: 1px solid black ;
    }
+
+   #comprar{
+    background:    #073763;
+background:    linear-gradient(#073763, #15d798);
+border:        3px solid #556699;
+border-radius: 21px;
+box-shadow:    0 1px #ff1515;
+padding:       12px 49px;
+color:         #ffffff;
+display:       inline-block;
+font:          normal bold 25px/1 "Playfair Display", serif;
+text-align:    center;
+   }
+
+   
