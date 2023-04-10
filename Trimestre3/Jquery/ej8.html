@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+    <script src="jquery-3.6.4.js"></script>
+    <script>
+      
+       
+            
+            
+      
+    $(document).ready(function() {
+      
+      $('#obtener-src').click(function() {
+        var src = $('img').attr('src');
+        alert('El valor del atributo src de la imagen es: ' + src);
+      });
+      
+      
+      $('#obtener-html-encabezado').click(function() {
+        var html = $('h1').html();
+        alert('El valor del HTML del encabezado es: ' + html);
+      });
+      
+      
+      $('#obtener-html-parrafo').click(function() {
+        var html = $('p').html();
+        alert('El valor del HTML del primer párrafo es: ' + html);
+      });
+    });
+  </script>
+</head>
+<body>
+    <img src="https://via.placeholder.com/150" alt="Imagen de prueba">
+  <p>Este es el primer párrafo.</p>
+  <p>Este es el segundo párrafo.</p>
+  
+  <button id="obtener-src">Obtener src de la imagen</button>
+  <button id="obtener-html-encabezado">Obtener HTML del encabezado</button>
+  <button id="obtener-html-parrafo">Obtener HTML del primer párrafo</button>
+    
+    
+</body>
+</html>
