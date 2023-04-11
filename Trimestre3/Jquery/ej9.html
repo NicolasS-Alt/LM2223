@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 7</title>
-    
+    <title>Ejercicio 9</title>
+   
     <script src="jquery-3.6.4.js"></script>
     <script>
-      let imagen=<img src='cuchilla.png'></img>
-       
-      $(document).ready(function() {
-      
-      $('a').append('img src="cuchilla.png"');
-    });
+    var url = 'cuchilla.png';
+$(document).ready(function() {
+    var image = new Image();
+    image.src = url;
+    $('a').append(image);
+});
   </script>
 </head>
 <body>

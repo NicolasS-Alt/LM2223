@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 12</title>
+    <style>
+		#caja {
+			width: 300px;
+			height: 100px;
+			border: 1px solid black;
+			text-align: center;
+			line-height: 100px;
+			font-size: 24px;
+		}
+	</style>
+    <script src="jquery-3.6.4.js"></script>
+    <script>
+		$(document).ready(function(){
+    $("#boton").click(function(){
+        $("#caja").toggle();
+        if ($("#boton").text() == "Mostrar texto") {
+            $("#boton").text("Ocultar texto");
+        } else {
+            $("#boton").text("Mostrar texto");
+        }
+    });
+});
+	</script>
+</head>
+<body>
+    
+    <div id="caja">Este es un texto centrado.</div>
+	<br>
+	<button id="boton">Vaciar contenido</button>
+</body>
+</html>
