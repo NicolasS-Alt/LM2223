@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <Script src="jquery-3.6.4.js"></Script>
+    <script>
+    $(document).ready(function() {
+        $(".enlaces").each(function() {
+            var enlace = $(this).attr("href");
+            $.ajax({
+                type: "HEAD",
+                url: enlace,
+                success: function(data, textStatus, request) {
+                    var size = request.getResponseHeader('Content-Length');
+                    var sizeKB = (size / 1024).toFixed(2);
+                    $(this).append(" (" + sizeKB + " KB)");
+                }.bind(this),
+                error: function() {
+                    console.log("Error en la solicitud de " + enlace);
+                }
+            });
+        });
+    });</script>
+</head>
+
+<body>
+    <a href="https://www.google.com" class="enlaces">Google</a>
+<a href="https://www.facebook.com" class="enlaces">Facebook</a>
+<a href="https://www.twitter.com" class="enlaces">Twitter</a>
+</body>
+</html>
