@@ -7,6 +7,7 @@ $(document).ready(function () {
         $.ajax({
             url: `https://www.googleapis.com/books/v1/volumes?q=intitle:${titulo}&key=${apiKey}`,
             success: function (data) {
+                console.log(data);
                 let libros = data.items;
                 let resultadoHTML = '';
 
