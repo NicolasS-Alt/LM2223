@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Consulta de libros</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#btnConsultar').click(function() {
+        var bookId = $('#bookId').val();
+        consultarLibro(bookId);
+      });
+    });
+
+    function consultarLibro(bookId) {
+      $.ajax({
+        url: 'https://gutendex.com/books/' + bookId,
+        dataType: 'json',
+        success: function(data) {
+          DetallesLibro(data);
+        },
+        error: function() {
+          alert('Error al consultar el libro');
+        }
+      });
+    }
+
+    function DetallesLibro(data) {
+      var titulo = data.title;
+      var autor = data.authors[0].name;
+      var imagen = data.formats['image/jpeg'];
+      var enlaceDescarga = data.formats['text/plain; charset=utf-8'];
+      var numDescargas = data.download_count;
+
+      $('#titulo').text('Título: ' + titulo);
+      $('#autor').text('Autor: ' + autor);
+      $('#imagen').attr('src', imagen);
+      $('#enlaceDescarga').attr('href', enlaceDescarga);
+      $('#numDescargas').text('Número de descargas: ' + numDescargas);
+    }
+  </script>
+</head>
+<body>
+  <h1>Consulta de libros por ID</h1>
+  <input type="text" id="bookId" placeholder="Introduce el ID del libro">
+  <button id="btnConsultar">Consultar por el ID del libro</button>
+
+  <h2 id="titulo"></h2>
+  <p id="autor"></p>
+  <img id="imagen" src="" alt="Imagen del libro">
+  <a id="enlaceDescarga" href="">Descargar libro en formato txt</a>
+  <p id="numDescargas"></p>
+</body>
+</html>

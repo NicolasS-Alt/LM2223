@@ -5,6 +5,7 @@ $(document).ready(function () {
 
         // Llamada getJSON utilizando jQuery
         $.getJSON(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&text=${texto}&format=json&nojsoncallback=1`, function (data) {
+            console.log(data);
             let resultadoHTML = '';
             if (data.photos.photo.length > 0) {
                 data.photos.photo.forEach(function (foto) {

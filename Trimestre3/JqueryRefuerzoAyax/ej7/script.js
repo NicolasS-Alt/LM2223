@@ -8,6 +8,7 @@ $(document).ready(function () {
             let resultadoHTML = '';
 
             if (data.data.length > 0) {
+                console.log(data);
                 data.data.forEach(function (gif) {
                     resultadoHTML += `
                     <div>
